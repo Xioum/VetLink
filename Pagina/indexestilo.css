@@ -1,10 +1,6 @@
-@font-face {
-    font-family: Codec;
-    font-family: 'Questrial', sans-serif;
-}
 *{
     box-sizing: border-box;
-    font-family:Questrial;  
+    font-family:Questrial;
 }
 
 p{font-size: 1.25em;}
@@ -12,10 +8,6 @@ h2{font-size: 2.7em;}
 
 body {
     margin:0;
-}
-.containerh{
-    max-width: 1800px;
-    margin: auto;
 }
 header{
     background: linear-gradient(to right, #9340FF, #0CC0DF);
@@ -27,15 +19,7 @@ header .logo{
     color: white;
     font-size: 1.7em;
 }
-#hero{
-    display: ;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 35vh;
 
-}
 /*-------Burger Menu--------*/
 .burger{
     position: relative;
@@ -98,137 +82,54 @@ header .logo{
     background-color: #707070;
 }
 /*------------------SLIDER------------------*/
-
-.container-slider img{
-    max-width: 100%;
-}
-
-.container-slider{
+.container-carousel{
     position: relative;
-    max-width: 900px;
-    width: 100%;
-    border-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background-color: white;
     overflow: hidden;
 }
-
-.slide{
-    display: flex;
-    transform: translate3d(0,0,0);
-    transition: all 1s;
-    animation-name: autoplay;
-    animation-duration: 18s;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-
-.item-slide:nth-of-type(2){
-    animation-duration: 23s;
-}
-
-.item-slide{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    flex-grow: 0;
-    max-width: 100%;
-}
-
-.pagination{
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.pagination-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid white;
-    width: 10px;
-    height: 10px;
-    border-radius: 9px;
-    overflow: hidden;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.5);
-    margin: 0 10px;
-    text-align: center;
-    transition: all 300ms;
-}
-
-.pagination-item:hover{
-    transform: scale(2);
-}
-
-.pagination-item img{
-    display: inline-block;
-    max-width: none;
+.carrusel{
+    width: 300%;
     height: 100%;
-    transform: scale(1);
-    opacity: 0;
-    transition: all 300ms;
+    display: flex;
 }
-
-.pagination-item:hover img{
-    opacity: 1;
-    transform: scale(1);
+.slider-section{
+    width: calc(100%/3);
+    height: 100%;
 }
-
-input[id="1"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(0,0,0);
+.slider-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
-    background: white;
-
+.btn-left,
+.btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(126, 126, 126);
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
 }
-
-input[id="2"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100%*1),0,0);
+.btn-left:hover,
+.btn-right:hover{
+    background-color: #999999d4;
 }
-
-input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
-    background: white;
-    
+.btn-left{
+    left: 10px;
 }
-
-input[id="3"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100%*2),0,0);
-}
-
-input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
-    background: white;
-    
-}
-
-@keyframes autoplay{
-    0%{
-        transform: translate3d(calc(-100%*0),0,0);
-    }
-    33%{
-        transform: translate3d(calc(-100%*0),0,0);
-    }
-    39%{
-        transform: translate3d(calc(-100%*1),0,0);
-    }
-    72%{
-        transform: translate3d(calc(-100%*1),0,0);
-    }
-    78%{
-        transform: translate3d(calc(-100%*2),0,0);
-    }
-    100%{
-        transform: translate3d(calc(-100%*2),0,0);
-    }
+.btn-right{
+    right: 10px;
 }
 /*------------------Producto Destacado------------------*/
 .seleccion {
@@ -245,7 +146,6 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     margin-top: 50px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .info img {
@@ -261,7 +161,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .info {
     flex: 1;
     display: flex;
-    flex-direction: ;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }

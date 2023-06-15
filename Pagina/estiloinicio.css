@@ -1,14 +1,10 @@
-@font-face {
-    font-family: Codec;
-    src: url(Codec.ttf) ;
-}
 *{
     box-sizing: border-box;
-    font-family: Codec;
+    font-family:Questrial;
 }
 h1 {
   font-size: 2.5em;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top:-20px;
   left: 5%;
   margin-top: 6%;
@@ -21,6 +17,7 @@ body{
 }
 
 .btn {
+    top: 100%;
     font-size: 1.6em;
     font-weight: bold;
     padding: 10px 35px;
@@ -42,6 +39,7 @@ header {
 }
 
 header .logo{
+    color: black;
     margin: 0;
     padding: 25px 30px;
     font-weight:bold;
@@ -86,7 +84,7 @@ img{
 }
 .slider-container{
   position: absolute;
-  bottom: 30%;
+  bottom: 40%;
   left: 50%;
   right: 10%;
   z-index: -1;
@@ -102,7 +100,7 @@ img{
   transform: translate3d(0,0,0);
   transition: all 600ms;
   animation-name: autoplay;
-  animation-duration: 55s; /* Changed from 20s */
+  animation-duration: 55s;
   animation-direction: alternate;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -115,19 +113,19 @@ img{
   flex-grow: 0;
   max-width: 100%;
   overflow: hidden;
-  animation-delay: 0s; /* Added */
+  animation-delay: 0s;
 }
 .item-slide:nth-child(2) {
-  animation-delay: calc(5s * 1); /* Added */
+  animation-delay: calc(5s * 1);
 }
 .item-slide:nth-child(3) {
-  animation-delay: calc(5s * 2); /* Added */
+  animation-delay: calc(5s * 2);
 }
 .item-slide:nth-child(4) {
-  animation-delay: calc(5s * 3); /* Added */
+  animation-delay: calc(5s * 3);
 }
 .item-slide:nth-child(5) {
-  animation-delay: calc(5s * 4); /* Added */
+  animation-delay: calc(5s * 4);
 }
 .item-slide img {
   width: 1000px;
@@ -247,10 +245,10 @@ section .wave{
         padding-right: 10px;
     }
     h1{
-      font-size: 4em;
+        font-size: 4em;
         position: absolute;
         top: 25%;
-        width:98%;
+        width:35%;
         text-align: initial;
         padding: 0px 30px;
         color:black;
@@ -263,7 +261,7 @@ section .wave{
 
     /*-------Slider-------*/
     .slider-container{
-      position:relative :
+      position:absolute;
       width: 900px;
       height: 500px;
       left: 70%;
@@ -274,5 +272,6 @@ section .wave{
     }
     .slider-container .item-slide img {
       filter: none;
+      height: 500px;
     }
 }
