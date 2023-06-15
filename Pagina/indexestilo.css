@@ -1,9 +1,10 @@
 @font-face {
     font-family: Codec;
-    src: url(Codec.ttf) ;
+    font-family: 'Questrial', sans-serif;
 }
 *{
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    font-family:Questrial;  
 }
 
 p{font-size: 1.25em;}
@@ -27,7 +28,7 @@ header .logo{
     font-size: 1.7em;
 }
 #hero{
-    display: flex;
+    display: ;
     align-items: center;
     justify-content: center;
     text-align: center;
