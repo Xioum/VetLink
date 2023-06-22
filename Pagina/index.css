@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    font-family:Questrial;
+    margin: 0;
+    padding: 0;
+}
+
+h2{font-size: 2.7em;}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(to right, #9340FF, #0CC0DF);
+    height: 50px;
+}
+p{
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.logo{
+    max-width: 5rem;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/*-------Burger Menu--------*/
+.nav-list   {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a  {
+    text-decoration: none;
+    color:white;
+}
+.burger{
+    display: none;
+}
+
+/*------------------SLIDER------------------*/
+.container-carousel{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 500px;
+    background-color: white;
+    overflow: hidden;
+}
+.carrusel{
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.slider-section{
+    width: calc(100%/3);
+    height: 100%;
+}
+.slider-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-left,
+.btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(126, 126, 126);
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+.btn-left:hover,
+.btn-right:hover{
+    background-color: #999999d4;
+}
+.btn-left{
+    left: 10px;
+}
+.btn-right{
+    right: 10px;
+}
+/*------------------Producto Destacado------------------*/
+.seleccion {
+    transition: 0.5s ease;
+    opacity: 1;
+    width: 80%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info img {
+    display: block;
+    margin-right: 20px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info h2 {
+    font-size: 24px;
+    color: #707070;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.info p {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info .precio {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info .fila button {
+    height: 40px;
+    border: none;
+    padding: 0 20px;
+    color: #fff;
+    background: linear-gradient(to right, #9340FF, #0CC0DF);
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+/*------------------Mostrador------------------*/
+
+
+/*------------------Responsive------------------*/
+@media screen and (max-width: 1025px){  
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -195px;
+        width: 195px;
+        min-height: 100vh;
+        display: block;
+        z-index: 98;
+        background-color: rgb(255, 255, 255);
+        padding-top: 120px;
+        padding: 1rem;
+        transition: 0.4s;
+        border-left: 1px solid white;
+        bottom: 0;
+        font-size: 20px;
+      }
+    .nav.is-active {
+        right: 0;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+      }
+    .nav-list{
+        z-index: 97;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 55px;
+    }
+    .nav-list li a{
+        color:white;
+        padding: 5px 5px;
+        border-radius: 6px;
+        background-color: #b8b8b8;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    /*---slider----*/
+    .container-carousel{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        overflow: hidden;
+    }
+    /*---EXPERIMENTO---*/
+    .burger{
+        z-index: 99;
+        position: relative;
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    
+    }
+    .burger .bar, .burger:after, .burger:before {
+        content:'';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0px;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+    
+    .burger.is-active::before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+        background-color: #707070;
+      }
+      
+      .burger.is-active::after {
+        transform: rotate(45deg) translate(-9px, -8px);
+        background-color: #707070;
+      }
+    .burger.is-active .bar {
+        opacity: 0;
+    }
+}

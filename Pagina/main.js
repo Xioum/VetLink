@@ -1,12 +1,10 @@
 /*-------Aqui Empieza el JS del BURGER MENU-------*/
-
 const burger = document.querySelector('.burger');
-const mobile_menu=document.querySelector('.mobile-nav');
-
+const nav = document.querySelector('.nav');
 
 burger.addEventListener('click', function() {
   burger.classList.toggle('is-active');
-  mobile_menu.classList.toggle('is-active');
+  nav.classList.toggle('is-active');
 });
 
 /*-------Aqui Empieza el JS del SLIDER de 3 imagenes-------*/
