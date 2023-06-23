@@ -2,76 +2,130 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetLink</title>
-    <link rel="stylesheet" href="indexestilo.css">
+    <link rel="stylesheet" href="inicio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icons/Logo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="estiloinicio.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <p class="logo"><img src="img/icons/Logo1.png">VetLink</p>
-            <nav>
-                <a href="SobreNosotros">Sobre Nosotros</a>
-            </nav>
+    <header class="container">
+    <!--Burger menu-->
+            <p class="logo"><img src="img/icons/Logo2.png">VetLink</p>
+                <button class="burger">
+                    <div class="bar"></div>
+                </button>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="#">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+    </header>
+    <!--Aqui va el slider-->
+    <section class="hero">
+        <div class="container-carousel">
+            <div class="carrusel" id="slider">
+                <section class="slider-section">
+                    <img src="img/Slider/1.png">
+                </section>
+                <section class="slider-section">
+                    <img src="img/Slider/2.png">
+                </section>
+                <section class="slider-section">
+                    <img src="img/Slider/3.png">
+                </section>
+            </div>
+            <div class="btn-left"><img src="img/icons/arrow-left.png"></div>
+            <div class="btn-right"><img src="img/icons/arrow-right.png"></div>
         </div>
-    </header>   
-    <section id="hero">
-        <h1>Siempre Conectados<br>Con Tus Mascotas</h1>
-        <form action="index.html">
-            <button class="btn">Ingresa</button>
-        </form>
     </section>
-<!--Section del wave animation-->
-<section id="wave">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
-</section>
-<!--Este es el Slider de las imagnes-->
-<div class="slider-container">
-    <div class="slide">
-        <div class="item-slide">
-            <img src="img/Mascotas/Fatima.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Jose.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Memo.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Mon.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Ogun1.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Ogun2.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Ogun3.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Ogun4.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Mary1.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Mary2.jpg">
-        </div>
-        <div class="item-slide">
-            <img src="img/Mascotas/Dani.jpg">
-        </div>
-</div>
+    <!--Productos-->
+    <section id="prodDest">
+        <div class="seleccion">
+            <div class="info">
+                <img src="img/producto/9.png">
+                <h2 id="desta">PRODUCTO DESTACADO</h2>
+                <P id="descripcion">Descripcion del producto</P>
 
+                <span class="precio" id="precio">$100.000</span>
+
+                <div class="fila">
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prodlist">
+        <div class="mostrador">
+            <div class="fila">
+                <div class="item">
+                    <img src="img/producto/1.png">
+                    <p class="descripcion">Producto 1</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/2.png">
+                    <p class="descripcion">Producto 2</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/3.png">
+                    <p class="descripcion">Producto 3</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/4.png">
+                    <p class="descripcion">Producto 4</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item">
+                    <img src="img/producto/5.png">
+                    <p class="descripcion">Producto 5</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/6.png">
+                    <p class="descripcion">Producto 6</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/7.png">
+                    <p class="descripcion">Producto 7</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+                <div class="item">
+                    <img src="img/producto/8.png">
+                    <p class="descripcion">Producto 8</p>
+                    <span class="precio">$ 75.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--categorias-->
+    <section id="categorias">
+        <div class="container">
+          <h2>Categorias</h2>
+          <div class="carta">
+            <button onclick="location.href='jugueteria.html'">Juguetería</button>
+          </div>
+          <div class="carta">
+            <button onclick="location.href='accesorios.html'">Accesorios</button>
+          </div>
+          <div class="carta">
+            <button onclick="location.href='salud.html'">Salud y Bienestar</button>
+          </div>
+          <div class="carta">
+            <button onclick="location.href='alimentos.html'">Alimentos</button>
+          </div>
+        </div>
+      </section>
+    <script src="main.js"></script>
 </body>
 </html>
