@@ -1,0 +1,131 @@
+*{
+    font-family: questrial;
+}
+body {
+    background: linear-gradient(to bottom,#000000, #00111d 45%,#002641 ,#4299c2);
+}
+form {
+    padding: 50px 35px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: align;
+    width: 380px;
+    backdrop-filter: blur(20px);
+    border: 1px white solid;
+    filter: blur(80%);
+    box-shadow: -25px 20px 100px rgba(38, 14, 105, 0.25), -25px 20px 100px rgba(31, 65, 105, 0.25);
+    z-index: 5;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 305px;
+    margin-bottom: 15px;
+}
+
+
+input{
+    color: white;
+    padding: 20px 15px 20px 60px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    outline: white;
+    font-size: 16px;
+    background: none;
+    border: 1px rgba(255, 255, 255, 0.425) solid;
+}
+
+
+input::placeholder{
+    font-size: 16px;
+    color: #BBBBE2;
+}
+
+.btn{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #9340FF, #0CC0DF);
+    cursor: pointer;
+    border: none !important;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
+}
+.btn:hover{
+    background-color: #9340FF; 
+    box-shadow: 0px 8px 12px rgba(88, 25, 170, 0.349); 
+    transform: translateY(-55%); 
+}
+.text-center{
+    margin-bottom: 20px;
+}
+a{
+    color: white;
+}
+/*aqui empieza el CSS del wave animation */
+section .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../img/ola.png);
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 4;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom:0;
+}
+
+section .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 3;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom:10px;
+}
+
+section .wave.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 2;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave4{
+    animation: animate2 5s linear infinite;
+    z-index: 1;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate{
+    0% {
+    background-position-x: 0;
+    }
+    100% {
+    background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0% {
+    background-position-x: 0;
+    }
+    100% {
+    background-position-x: -1000px;
+    }
+}
