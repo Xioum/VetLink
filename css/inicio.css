@@ -157,6 +157,7 @@ body{
 }
 .card{
     overflow: hidden;
+    margin-bottom: 5%;
 }
 /*FOOTER=======================*/
 main {
