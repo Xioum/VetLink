@@ -155,7 +155,9 @@ body{
 .card:hover .card-img-top {
     transform: scale(1.1);
 }
-
+.card{
+    overflow: hiddem;
+}
 /*FOOTER=======================*/
 main {
     width: 80%;
