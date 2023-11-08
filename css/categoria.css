@@ -110,7 +110,7 @@ body{
     text-align: center;
     text-decoration: none;
     color: white;
-    transform: translateY(25%);
+    transform: translateY(10%);
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 .category-list .category-item:hover {
