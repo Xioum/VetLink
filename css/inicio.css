@@ -46,7 +46,9 @@ body{
 .carousel-control-next {
     margin-right: 5%; 
 }
-
+.carousel-indicators .active{
+    background-color:red;
+}
 /* Efecto hover para los botones */
 .carousel-control-prev:hover, .carousel-control-next:hover {
     background-color: #9340FF; 
